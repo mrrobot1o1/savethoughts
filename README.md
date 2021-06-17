@@ -4,6 +4,7 @@
 ## Usage:
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/66872759/122341277-eb836900-cf60-11eb-8c6b-a48061ea6128.gif)
 
+Press **CTRL+D** to save (In multi line mode)
 
 ## Install:
 ```sh
