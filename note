@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# IF You want to change the notes folder name. change the NOTES_FOLDER value
+NOTES_FOLDER="mindsave"
+# If you want your file to be save as markdown you can change the extention.
+EXT="txt"
+
+ABS_PATH="$HOME/$NOTES_FOLDER"
+
+if [ ! -d $ABS_PATH ];
+then
+	mkdir $ABS_PATH
+fi
+
+FILE_NAME=$(date +%d-%h-%C%y.$EXT)
+
+if [ $# -eq 0 ]
+then
+	cat >>  "$ABS_PATH/$FILE_NAME"
+elif [ !  $# -eq 0 ]
+then
+	echo ""$@""'\n' >> "$ABS_PATH/$FILE_NAME"
+else
+	echo -e "Example: Lol Something Wrong"
+fi
